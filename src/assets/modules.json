@@ -1,0 +1,14 @@
+[
+    {
+        "entryComponent": "SimpletestComponent",
+        "location": "./assets/simpletest.umd.js",
+        "moduleName": "SimpletestModule",
+        "description": "simple test"
+    },
+    {
+        "entryComponent": "CanvasComponent",
+        "location": "./assets/simple-canvas-draw.umd.js",
+        "moduleName": "SimpleCanvasDrawModule",
+        "description": "Canvas Draw"
+    }
+]

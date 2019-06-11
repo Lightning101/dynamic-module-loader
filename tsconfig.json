@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "simpletest": [
+        "dist/simpletest"
+      ],
+      "simpletest/*": [
+        "dist/simpletest/*"
+      ],
+      "simple-canvas-draw": [
+        "dist/simple-canvas-draw"
+      ],
+      "simple-canvas-draw/*": [
+        "dist/simple-canvas-draw/*"
+      ]
+    }
   }
 }

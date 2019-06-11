@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatListModule, MatTabsModule} from '@angular/material';
+import { ConponentLoaderDirective } from './directives/conponent-loader.directive';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConponentLoaderDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatListModule,
+    MatTabsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

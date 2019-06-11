@@ -30,7 +30,7 @@
             "styles": [
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [ "node_modules/systemjs/dist/system.js" ]
           },
           "configurations": {
             "production": {
@@ -119,6 +119,77 @@
           }
         }
       }
-    }},
+    },
+    "simpletest": {
+      "projectType": "library",
+      "root": "projects/simpletest",
+      "sourceRoot": "projects/simpletest/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/simpletest/tsconfig.lib.json",
+            "project": "projects/simpletest/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/simpletest/src/test.ts",
+            "tsConfig": "projects/simpletest/tsconfig.spec.json",
+            "karmaConfig": "projects/simpletest/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/simpletest/tsconfig.lib.json",
+              "projects/simpletest/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "SimpleCanvasDraw": {
+      "projectType": "library",
+      "root": "projects/simple-canvas-draw",
+      "sourceRoot": "projects/simple-canvas-draw/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/simple-canvas-draw/tsconfig.lib.json",
+            "project": "projects/simple-canvas-draw/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/simple-canvas-draw/src/test.ts",
+            "tsConfig": "projects/simple-canvas-draw/tsconfig.spec.json",
+            "karmaConfig": "projects/simple-canvas-draw/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/simple-canvas-draw/tsconfig.lib.json",
+              "projects/simple-canvas-draw/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+    },
   "defaultProject": "DynamicModuleLoader"
 }
