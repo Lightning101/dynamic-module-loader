@@ -1,5 +1,5 @@
 # DynamicModuleLoader
-
+This project loads UMD modules from the assets folder when decaled in the module.json note loaded modules can only use imports shared by the main application.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 ## Development server
